@@ -3,6 +3,8 @@ package sorts_test
 import (
 	"reflect"
 	"testing"
+
+	"github.com/pchchv/goalgos/sorts"
 )
 
 func testFramework(t *testing.T, sortingFunction func([]int) []int) {
@@ -71,4 +73,10 @@ func testFramework(t *testing.T, sortingFunction func([]int) []int) {
 			}
 		})
 	}
+}
+
+//BEGIN TESTS
+
+func TestBubble(t *testing.T) {
+	testFramework(t, sorts.Bubble[int])
 }
