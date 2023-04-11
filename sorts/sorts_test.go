@@ -75,12 +75,14 @@ func testFramework(t *testing.T, sortingFunction func([]int) []int) {
 	}
 }
 
-//BEGIN TESTS
-
 func TestBubble(t *testing.T) {
 	testFramework(t, sorts.Bubble[int])
 }
 
 func TestQuick(t *testing.T) {
 	testFramework(t, sorts.Quicksort[int])
+}
+
+func TestMerge(t *testing.T) {
+	testFramework(t, sorts.Merge[int])
 }
