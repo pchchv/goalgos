@@ -1,7 +1,7 @@
 // Implementation of basic bubble sort algorithm
 // Reference: https://en.wikipedia.org/wiki/Bubble_sort
 
-package sort
+package sorts
 
 import "golang.org/x/exp/constraints"
 
