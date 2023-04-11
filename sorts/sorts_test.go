@@ -90,3 +90,7 @@ func TestMerge(t *testing.T) {
 func TestCircle(t *testing.T) {
 	testFramework(t, sorts.Circle[int])
 }
+
+func TestInsertion(t *testing.T) {
+	testFramework(t, sorts.Insertion[int])
+}
