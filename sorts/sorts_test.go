@@ -86,3 +86,7 @@ func TestQuick(t *testing.T) {
 func TestMerge(t *testing.T) {
 	testFramework(t, sorts.Merge[int])
 }
+
+func TestCircle(t *testing.T) {
+	testFramework(t, sorts.Circle[int])
+}
