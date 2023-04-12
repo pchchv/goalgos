@@ -49,3 +49,35 @@ func TestUpperBound(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkBinary(b *testing.B) {
+	testCase := generateBenchmarkTestCase()
+	b.ResetTimer() // this is important because the generateBenchmarkTestCase() is expensive
+	for i := 0; i < b.N; i++ {
+		_, _ = Binary(testCase, i, 0, len(testCase)-1)
+	}
+}
+
+func BenchmarkBinaryIterative(b *testing.B) {
+	testCase := generateBenchmarkTestCase()
+	b.ResetTimer() // this is important because the generateBenchmarkTestCase() is expensive
+	for i := 0; i < b.N; i++ {
+		_, _ = BinaryIterative(testCase, i)
+	}
+}
+
+func BenchmarkLowerBound(b *testing.B) {
+	testCase := generateBenchmarkTestCase()
+	b.ResetTimer() // this is important because the generateBenchmarkTestCase() is expensive
+	for i := 0; i < b.N; i++ {
+		_, _ = LowerBound(testCase, i)
+	}
+}
+
+func BenchmarkUpperBound(b *testing.B) {
+	testCase := generateBenchmarkTestCase()
+	b.ResetTimer() // this is important because the generateBenchmarkTestCase() is expensive
+	for i := 0; i < b.N; i++ {
+		_, _ = UpperBound(testCase, i)
+	}
+}
