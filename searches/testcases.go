@@ -52,3 +52,14 @@ var upperBoundTests = []searchTest{
 
 	{[]int{}, 2, -1, ErrNotFound, "Empty"},
 }
+
+// generateBenchmarkTestCase function generate consistent testcase for benchmark test.
+func generateBenchmarkTestCase() []int {
+	var testCase []int
+
+	for i := 0; i < 1000; i++ {
+		testCase = append(testCase, i)
+	}
+
+	return testCase
+}
