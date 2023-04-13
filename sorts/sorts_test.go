@@ -102,3 +102,7 @@ func TestSimple(t *testing.T) {
 func TestImprovedSimple(t *testing.T) {
 	testFramework(t, sorts.ImprovedSimple[int])
 }
+
+func TestExchange(t *testing.T) {
+	testFramework(t, sorts.Exchange[int])
+}
