@@ -25,3 +25,24 @@ func TestHash(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkHash(b *testing.B) {
+	testCases := []struct {
+		name string
+		in   string
+	}{
+		{"hello world", "hello world"},
+		{"empty", ""},
+		{"a", "a"},
+		{"The quick brown fox jumps over the lazy dog", "The quick brown fox jumps over the lazy dog"},
+		{"The quick brown fox jumps over the lazy dog.", "The quick brown fox jumps over the lazy dog."},
+		{"Lorem ipsum", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+	}
+	for _, testCase := range testCases {
+		b.Run(testCase.name, func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				Hash([]byte(testCase.in))
+			}
+		})
+	}
+}
