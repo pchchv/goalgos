@@ -94,3 +94,11 @@ func TestCircle(t *testing.T) {
 func TestInsertion(t *testing.T) {
 	testFramework(t, sorts.Insertion[int])
 }
+
+func TestSimple(t *testing.T) {
+	testFramework(t, sorts.Simple[int])
+}
+
+func TestImprovedSimple(t *testing.T) {
+	testFramework(t, sorts.ImprovedSimple[int])
+}
