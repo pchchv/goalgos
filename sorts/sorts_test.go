@@ -145,3 +145,35 @@ func benchmarkFramework(b *testing.B, f func(arr []int) []int) {
 		}
 	}
 }
+
+func BenchmarkBubble(b *testing.B) {
+	benchmarkFramework(b, sorts.Bubble[int])
+}
+
+func BenchmarkMerge(b *testing.B) {
+	benchmarkFramework(b, sorts.Merge[int])
+}
+
+func BenchmarkQuick(b *testing.B) {
+	benchmarkFramework(b, sorts.Quicksort[int])
+}
+
+func BenchmarkInsertion(b *testing.B) {
+	benchmarkFramework(b, sorts.Insertion[int])
+}
+
+func BenchmarkCirkle(b *testing.B) {
+	benchmarkFramework(b, sorts.Circle[int])
+}
+
+func BenchmarkSimple(b *testing.B) {
+	benchmarkFramework(b, sorts.Simple[int])
+}
+
+func BenchmarkImprovedSimple(b *testing.B) {
+	benchmarkFramework(b, sorts.ImprovedSimple[int])
+}
+
+func BenchmarkExchange(b *testing.B) {
+	benchmarkFramework(b, sorts.Exchange[int])
+}
