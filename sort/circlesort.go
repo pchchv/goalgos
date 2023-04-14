@@ -1,6 +1,6 @@
 // Implementation of circle sort algorithm.
 // Reference: https://www.geeksforgeeks.org/circle-sort/
-package sorts
+package sort
 
 import (
 	"golang.org/x/exp/constraints"

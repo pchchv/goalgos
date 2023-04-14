@@ -1,6 +1,6 @@
 // Implementation of merge sorting algorithm.
 // Reference: https://en.wikipedia.org/wiki/Merge_sort
-package sorts
+package sort
 
 import (
 	"sync"

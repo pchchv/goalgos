@@ -1,6 +1,6 @@
 // Implementation of insertion sort algorithm.
 // Reference: https://en.wikipedia.org/wiki/Insertion_sort
-package sorts
+package sort
 
 import "golang.org/x/exp/constraints"
 

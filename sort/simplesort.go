@@ -2,7 +2,7 @@
 // Reference: https://arxiv.org/abs/2110.01111v1
 // see sort_test.go for a test implementation, test function TestSimple and TestImprovedSimple
 
-package sorts
+package sort
 
 import "golang.org/x/exp/constraints"
 

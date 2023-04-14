@@ -1,10 +1,10 @@
-package sorts_test
+package sort_test
 
 import (
 	"reflect"
 	"testing"
 
-	"github.com/pchchv/goalgos/sorts"
+	"github.com/pchchv/goalgos/sort"
 )
 
 func testFramework(t *testing.T, sortingFunction func([]int) []int) {
@@ -76,35 +76,35 @@ func testFramework(t *testing.T, sortingFunction func([]int) []int) {
 }
 
 func TestBubble(t *testing.T) {
-	testFramework(t, sorts.Bubble[int])
+	testFramework(t, sort.Bubble[int])
 }
 
 func TestQuick(t *testing.T) {
-	testFramework(t, sorts.Quicksort[int])
+	testFramework(t, sort.Quicksort[int])
 }
 
 func TestMerge(t *testing.T) {
-	testFramework(t, sorts.Merge[int])
+	testFramework(t, sort.Merge[int])
 }
 
 func TestCircle(t *testing.T) {
-	testFramework(t, sorts.Circle[int])
+	testFramework(t, sort.Circle[int])
 }
 
 func TestInsertion(t *testing.T) {
-	testFramework(t, sorts.Insertion[int])
+	testFramework(t, sort.Insertion[int])
 }
 
 func TestSimple(t *testing.T) {
-	testFramework(t, sorts.Simple[int])
+	testFramework(t, sort.Simple[int])
 }
 
 func TestImprovedSimple(t *testing.T) {
-	testFramework(t, sorts.ImprovedSimple[int])
+	testFramework(t, sort.ImprovedSimple[int])
 }
 
 func TestExchange(t *testing.T) {
-	testFramework(t, sorts.Exchange[int])
+	testFramework(t, sort.Exchange[int])
 }
 
 func benchmarkFramework(b *testing.B, f func(arr []int) []int) {
@@ -147,33 +147,33 @@ func benchmarkFramework(b *testing.B, f func(arr []int) []int) {
 }
 
 func BenchmarkBubble(b *testing.B) {
-	benchmarkFramework(b, sorts.Bubble[int])
+	benchmarkFramework(b, sort.Bubble[int])
 }
 
 func BenchmarkMerge(b *testing.B) {
-	benchmarkFramework(b, sorts.Merge[int])
+	benchmarkFramework(b, sort.Merge[int])
 }
 
 func BenchmarkQuick(b *testing.B) {
-	benchmarkFramework(b, sorts.Quicksort[int])
+	benchmarkFramework(b, sort.Quicksort[int])
 }
 
 func BenchmarkInsertion(b *testing.B) {
-	benchmarkFramework(b, sorts.Insertion[int])
+	benchmarkFramework(b, sort.Insertion[int])
 }
 
 func BenchmarkCirkle(b *testing.B) {
-	benchmarkFramework(b, sorts.Circle[int])
+	benchmarkFramework(b, sort.Circle[int])
 }
 
 func BenchmarkSimple(b *testing.B) {
-	benchmarkFramework(b, sorts.Simple[int])
+	benchmarkFramework(b, sort.Simple[int])
 }
 
 func BenchmarkImprovedSimple(b *testing.B) {
-	benchmarkFramework(b, sorts.ImprovedSimple[int])
+	benchmarkFramework(b, sort.ImprovedSimple[int])
 }
 
 func BenchmarkExchange(b *testing.B) {
-	benchmarkFramework(b, sorts.Exchange[int])
+	benchmarkFramework(b, sort.Exchange[int])
 }

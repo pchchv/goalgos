@@ -1,7 +1,7 @@
 // Implementation of exchange sort algorithm, a variant of bubble sort
 // Reference: https://en.wikipedia.org/wiki/Sorting_algorithm#Exchange_sort
 
-package sorts
+package sort
 
 import "golang.org/x/exp/constraints"
 

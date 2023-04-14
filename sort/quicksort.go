@@ -1,7 +1,7 @@
 // Implementation of in-place quicksort algorithm
 // Reference: https://en.wikipedia.org/wiki/Quicksort
 
-package sorts
+package sort
 
 import "golang.org/x/exp/constraints"
 
