@@ -2,8 +2,8 @@
 // A Stack is a linear data structure in which operations are performed in a certain order.
 // The order can be LIFO (Last In First Out) or FILO (First In Last Out).
 // Reference:
-// 	Stack Data Structure : https://www.geeksforgeeks.org/stack-data-structure-introduction-program/
-// 	Stack (abstract data type) : https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
+//   Stack Data Structure : https://www.geeksforgeeks.org/stack-data-structure-introduction-program/
+// 	 Stack (abstract data type) : https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
 
 package stack
 
