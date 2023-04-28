@@ -56,3 +56,50 @@ func BenchmarkAVLTree_Delete(b *testing.B) {
 		helper()
 	}
 }
+
+func BenchmarkBSTree_Insert(b *testing.B) {
+	helper := func() {
+		tree := bt.NewBinarySearch[int]()
+		for i := 1; i <= testNum; i++ {
+			tree.Push(i)
+		}
+	}
+
+	for i := 0; i < b.N; i++ {
+		helper()
+	}
+}
+
+func BenchmarkBSTree_Has(b *testing.B) {
+	helper := func() {
+		tree := bt.NewBinarySearch[int]()
+		for i := 1; i <= testNum; i++ {
+			tree.Push(i)
+		}
+
+		for i := 1; i <= testNum; i++ {
+			tree.Has(i)
+		}
+	}
+
+	for i := 0; i < b.N; i++ {
+		helper()
+	}
+}
+
+func BenchmarkBSTree_Delete(b *testing.B) {
+	helper := func() {
+		tree := bt.NewBinarySearch[int]()
+		for i := 1; i <= testNum; i++ {
+			tree.Push(i)
+		}
+
+		for i := 1; i <= testNum; i++ {
+			tree.Delete(i)
+		}
+	}
+
+	for i := 0; i < b.N; i++ {
+		helper()
+	}
+}
