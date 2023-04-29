@@ -5,9 +5,6 @@ package tree
 
 import "golang.org/x/exp/constraints"
 
-// Verify Interface Compliance
-var _ Node[int] = &BSNode[int]{}
-
 // BSNode represents a single node in the BinarySearch.
 type BSNode[T constraints.Ordered] struct {
 	key    T
@@ -15,6 +12,16 @@ type BSNode[T constraints.Ordered] struct {
 	left   *BSNode[T]
 	right  *BSNode[T]
 }
+
+// BinarySearch represents a Binary-Search tree.
+// By default, _NIL = nil.
+type BinarySearch[T constraints.Ordered] struct {
+	Root *BSNode[T]
+	_NIL *BSNode[T] // a sentinel value for nil
+}
+
+// Verify Interface Compliance
+var _ Node[int] = &BSNode[int]{}
 
 func (n *BSNode[T]) Key() T {
 	return n.key
@@ -30,13 +37,6 @@ func (n *BSNode[T]) Left() Node[T] {
 
 func (n *BSNode[T]) Right() Node[T] {
 	return n.right
-}
-
-// BinarySearch represents a Binary-Search tree.
-// By default, _NIL = nil.
-type BinarySearch[T constraints.Ordered] struct {
-	Root *BSNode[T]
-	_NIL *BSNode[T] // a sentinel value for nil
 }
 
 // NewBinarySearch creates a novel Binary-Search tree

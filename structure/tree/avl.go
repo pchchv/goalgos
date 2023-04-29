@@ -8,9 +8,6 @@ import (
 	"golang.org/x/exp/constraints"
 )
 
-// Verify Interface Compliance
-var _ Node[int] = &AVLNode[int]{}
-
 // AVLNode represents a single node in the AVL.
 type AVLNode[T constraints.Ordered] struct {
 	key    T
@@ -19,6 +16,16 @@ type AVLNode[T constraints.Ordered] struct {
 	right  *AVLNode[T]
 	height int
 }
+
+// AVL represents a AVL tree.
+// By default, _NIL = nil.
+type AVL[T constraints.Ordered] struct {
+	Root *AVLNode[T]
+	_NIL *AVLNode[T] // a sentinel value for nil
+}
+
+// Verify Interface Compliance
+var _ Node[int] = &AVLNode[int]{}
 
 func (n *AVLNode[T]) Key() T {
 	return n.key
@@ -38,13 +45,6 @@ func (n *AVLNode[T]) Right() Node[T] {
 
 func (n *AVLNode[T]) Height() int {
 	return n.height
-}
-
-// AVL represents a AVL tree.
-// By default, _NIL = nil.
-type AVL[T constraints.Ordered] struct {
-	Root *AVLNode[T]
-	_NIL *AVLNode[T] // a sentinel value for nil
 }
 
 // NewAVL creates a novel AVL tree
