@@ -54,7 +54,6 @@ var graphTestCases = []struct {
 }
 
 func TestDirectedGraph(t *testing.T) {
-
 	// Testing self-loops separately only for directed graphs.
 	// For undirected graphs each edge already creates a self-loop.
 	directedGraphTestCases := append(graphTestCases, struct {
